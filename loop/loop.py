@@ -56,6 +56,28 @@ print(f'A soma dos 5 números é: {soma}')
 print(f'A média dos 5 números é: {media}')
 
 #Exercicio 5
+num1 = int(input('Digite o primeiro número '))
+num2 = int(input('Digite o segundo número '))
+if num1 < num2:
+    for i in range(num1 + 1, num2):
+        print(i)
+elif num2 < num1:
+    for i in range(num2 + 1, num1):
+        print(i)
+else:
+    print('Os números são iguais')
+        
+
+#Exercicio 6
+while True:
+    usuario = input('Digite o nome do usuário ')
+    senha = input('Digite a senha ')
+    if usuario != senha:
+        break
+    else:
+    print('Usuario e senha não podem ser iguais')
+
+#Exercicio 7
 
 
 
