@@ -49,6 +49,8 @@ soma = 0
 
 while numeros < 5:
     numero = float(input(f'Digite o {numeros + 1}º número '))
+    while not numero.isnumeric:
+        numero = float(input(f'Digite o {numeros + 1}º número '))
     soma += numero
     numeros += 1
     media = soma / 5
@@ -78,6 +80,104 @@ while True:
     print('Usuario e senha não podem ser iguais')
 
 #Exercicio 7
+i = int(input('Digite qual tabuada deseja ver '))
+j = 1
+num = 0
+while i < 11:
+    while j < 11:
+        print(f'{i} * {j} = {i*j}')
+        j += 1
+
+#Exercicio 8
+n = int(input('Quantos números da série de Fibonacci deseja ver? '))
+a, b = 0, 1
+
+for _ in range(2, n):
+    a, b = b, a + b
+    print(a)
+
+#Exercicio 9
+pares = 0
+impares = 0
+i = 0
+while i < 10:
+    num = int(input('Digite um número '))
+    if num % 2 == 0:
+        pares += 1
+    else:
+        impares += 1
+    i += 1
+print(f'Pares: {pares}\n Ímpares: {impares}')
+
+#Exercicio 10
+numero = int(input('Digite um número '))
+fatorial = 1
+i = 1
+while i <= numero:
+    fatorial *= i
+    i += 1
+    print(f'{numero}! = {fatorial}')
+
+#Exercicio 11
+i = 2
+num = int(input('Digite um número '))
+while True:
+    i += 1
+    if num % i == 0:
+        print(f'{num} não é primo')
+        break
+    elif i == num-1:
+        print(f'{num} é primo')
+        break
+
+#Exercicio 12
+i = 0
+num = int(input('Quantas notas deseja saber a média? '))
+soma = 0
+while i < num:
+    nota = int(input('Digite as notas '))
+    soma += nota
+    i += 1
+    media = soma / num
+print(f'A média aritmética é: {media} ')
+
+#Exercicio 13
+ano = int(input('Digite após quantos anos você deseja ver o salário '))
+salarioInicial = int(input('Digite o salário inicial '))
+i = 0
+taxa = 0.015
+while i < ano:
+    if ano == 1:
+        salario = salarioInicial * (taxa+1)
+        print(f'O salário será {salario}')
+        i += 1
+    else:
+        taxa *= 2
+        salario = salarioInicial * (taxa+1)
+        i += 1
+        print(f'O salário será {salario}')
+
+#Exercicio 14
+contagem1 = 0
+contagem2 = 0
+contagem3 = 0
+contagem4 = 0
+n = int(input('Quantos números você deseja verificar? '))
+i = 0
+num = int(input('Digite um número '))
+while i < n :
+    if num >= 0 and num <= 25:
+        contagem1 += 1
+    elif num >= 26 and num <= 50:
+        contagem2 += 1
+    elif num >= 51 and num <= 75:
+        contagem3 += 1
+    elif num >= 76 and num <= 100:
+        contagem4 += 1
+    print(f'entre 0 e 25:{contagem1}\n entre 26 e 50: {contagem2}\n entre 51 e 76: {contagem3}\n entre 76 e 100: {contagem4}')
+
+
+
 
 
 
